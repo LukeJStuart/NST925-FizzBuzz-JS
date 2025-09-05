@@ -1,9 +1,23 @@
-// This is our main function
-function fizzbuzz() {
-    console.log("Hello, World!");
+const readline = require('readline');
 
-    // Put your code here...
-    for (let i = 1; i <= 255; i++) {
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Enter a number: ', (answer) => {
+    const max = parseInt(answer);
+    if (isNaN(max) || max < 1) {
+        console.log('Please enter a valid positive integer.');
+        rl.close();
+        return;
+    }
+    fizzbuzz(max);
+    rl.close();
+});
+
+function fizzbuzz(max) {
+    for (let i = 1; i <= max; i++) {
         let output = [];
         let multipleOfEleven = i % 11 === 0;
         if (i % 3 === 0 && !multipleOfEleven) output.push("Fizz");
@@ -15,6 +29,3 @@ function fizzbuzz() {
         console.log(output.join("") || i);
     }
 }
-
-// Now, we run the main function:
-fizzbuzz();
