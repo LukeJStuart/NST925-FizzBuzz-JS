@@ -1,0 +1,15 @@
+{
+  "name": "nst925-fizzbuzz-js",
+  "version": "1.0.0",
+  "description": "This is our first programming exercise in the bootcamp. We will write some code to play the game \"FizzBuzz\". The requirements for this game can be found [here](FizzBuzzSpec.md).",
+  "main": "fizzbuzz.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.1.3"
+  }
+}
